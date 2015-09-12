@@ -3,14 +3,22 @@
 ### Description
 Javascript/CSS animation and transition utility. Useful for React performant animations.
 
-### Demo
-`npm start dev` then visit http://127.0.0.1:3000
+### Features
+- Supports CSS animations and transitions with the same API
+- Animation definitions are in plain javascript. This means you can create functions that create animations.
+- Cleans up everything on completion
+- Automatically prefixed
+- Supports only setting `from` or `to`
 
-### Usage
+### Installation
 ```
 npm i --save moveit
 ```
 
+### Demo
+`npm start dev` then visit http://127.0.0.1:3000
+
+### Usage
 ```js
 import { transition, animation } from 'moveit';
 
@@ -18,7 +26,7 @@ transition(node, definition, override?, callback?);
 ```
 `definition` is an object with `keyframes` and standard CSS properties for
 animation / transition. `keyframes` takes percentages (or `from` and `to`) as
-keys and CSS maps as values. Everything is prefixed for you.
+keys and CSS maps as values.
 
 Possible properties :
 - `delay`
@@ -34,7 +42,7 @@ Animation only :
 ```js
 import { transition } from 'moveit';
 
-let definition = {
+const definition = {
   keyframes: {
     from: {
       opacity: '0'
@@ -51,12 +59,25 @@ transition(node, definition);
 ```
 
 ### You can use transition or animation
-API is the same, but with transition only the `from` and `to` keyframes will be
-used.
+API is the same, but with animation you can add intermediate keyframes.
 ```js
 import { animation } from 'moveit';
 
-//...
+const definition = {
+  keyframes: {
+    from: {
+      opacity: '0'
+    },
+    '50%': {
+      opacity: '.3'
+    }
+    to: {
+      opacity: '1'
+    }
+  },
+  ease: 'ease-in',
+  duration: '1s'
+};
 
 animation(node, definition);
 ```
@@ -95,11 +116,11 @@ class Menu extends Component {
   }
 
   render() {
-      return (
-          <div ref='animated'>
-            <button onClick={ ::this.handleClick }></button>
-          </div>
-      );
+    return (
+      <div ref='animated'>
+        <button onClick={ ::this.handleClick }></button>
+      </div>
+    );
   }
 }
 ```

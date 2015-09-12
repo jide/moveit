@@ -1,6 +1,6 @@
 {
   "name": "moveit",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Move it",
   "main": "lib/index.js",
   "repository": {
@@ -46,5 +46,11 @@
   },
   "dependencies": {
     "vendor-prefix": "^0.1.0"
-  }
+  },
+  "keywords": [
+    "animation",
+    "transition",
+    "css",
+    "react"
+  ]
 }
