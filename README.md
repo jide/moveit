@@ -7,8 +7,12 @@ Javascript/CSS animation and transition utility. Useful for React performant ani
 `npm start dev` then visit http://127.0.0.1:3000
 
 ### Usage
+```
+npm i --save moveit
+```
+
 ```js
-import { transition, animation } from '../src';
+import { transition, animation } from 'moveit';
 
 transition(node, definition, override?, callback?);
 ```
@@ -28,7 +32,7 @@ Animation only :
 
 ### Example
 ```js
-import { transition } from '../src';
+import { transition } from 'moveit';
 
 let definition = {
   keyframes: {
@@ -50,7 +54,7 @@ transition(node, definition);
 API is the same, but with transition only the `from` and `to` keyframes will be
 used.
 ```js
-import { animation } from '../src';
+import { animation } from 'moveit';
 
 //...
 
