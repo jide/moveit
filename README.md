@@ -86,7 +86,7 @@ animation(node, definition);
 
 ### Callback on end
 ```js
-transition(node, definition, () => console.log(done));
+transition(node, definition, () => console.log('done !'));
 ```
 
 ### Override definition
@@ -100,6 +100,7 @@ transition(node, definition, override);
 
 ### With React
 ```js
+// You could import this from an animations.js file, pass it through props...
 const openMenu = props => {
   return {
     keyframes: {
