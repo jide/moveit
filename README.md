@@ -12,6 +12,19 @@ import { transition, animation } from '../src';
 
 transition(node, definition, override?, callback?);
 ```
+`definition` is an object with `keyframes` and standard CSS properties for
+animation / transition. `keyframes` takes percentages (or `from` and `to`) as
+keys and CSS maps as values. Everything is prefixed for you.
+
+Possible properties :
+- `delay`
+- `duration`
+- `ease`
+
+Animation only :
+- `iterationCount`
+- `direction`
+- `fillMode`
 
 ### Example
 ```js
@@ -33,7 +46,9 @@ let definition = {
 transition(node, definition);
 ```
 
-### You can use transition or animation, same API
+### You can use transition or animation
+API is the same, but with transition only the `from` and `to` keyframes will be
+used.
 ```js
 import { animation } from '../src';
 
