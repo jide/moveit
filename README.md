@@ -40,6 +40,9 @@ Animation only :
 - `direction`
 - `fillMode`
 
+### Easing
+You can pass a string corresponding to one of these [easings](https://github.com/jide/moveit/blob/master/src/easings.js), or use a custom function using CSS `cubic-bezier()` syntax.
+
 ### Example
 ```js
 import { transition } from 'moveit';
