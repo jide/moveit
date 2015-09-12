@@ -1,5 +1,7 @@
 ## Move it
 
+![](https://cloud.githubusercontent.com/assets/333073/9832219/6e0ff88e-5974-11e5-94c4-1efcac24f657.jpg)
+
 ### Description
 Javascript/CSS animation and transition utility. Useful for React performant animations.
 
