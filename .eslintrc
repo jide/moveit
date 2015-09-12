@@ -1,0 +1,33 @@
+{
+    "parser": "babel-eslint",
+    "env": {
+      "browser": true,
+      "node": true
+    },
+    "ecmaFeatures": {
+        "classes": true,
+        "jsx": true,
+        "modules": true
+    },
+    "plugins": [
+      "react"
+    ],
+    "rules": {
+      "quotes": [2, "single"],
+      "eol-last": [0],
+      "no-mixed-requires": [0],
+      "no-underscore-dangle": [0],
+      "space-after-keywords": [1, "always"],
+      "no-unused-vars": [2, {"vars": "all", "args": "after-used"}],
+      "react/jsx-uses-react": 2,
+      "react/jsx-no-undef": 2,
+      "react/self-closing-comp": 1,
+      "react/wrap-multilines": 1,
+      "react/jsx-quotes": [1, "single", "avoid-escape"],
+      "react/jsx-uses-vars": 2,
+      "react/react-in-jsx-scope": 2,
+      "react/no-did-mount-set-state": 2,
+      "react/no-did-update-set-state": 2,
+      "react/jsx-curly-spacing": [2, "always"]
+    }
+}
