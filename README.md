@@ -3,11 +3,11 @@
 ![](https://cloud.githubusercontent.com/assets/333073/9832219/6e0ff88e-5974-11e5-94c4-1efcac24f657.jpg)
 
 ### Description
-Javascript/CSS animation and transition utility. Useful for React performant animations.
+Javascript animation and transition utility. Uses CSS under the hood. Useful for React performant animations.
 
 ### Features
-- Supports CSS animations and transitions with the same API
-- Animation definitions are in plain javascript. This means you can create functions that create animations.
+- Supports animations and transitions with the same API
+- Animations/transitions definitions are in plain javascript. This means you can create functions that create animations.
 - Cleans up everything on completion
 - Automatically prefixed
 - Supports only setting `from` or `to`
