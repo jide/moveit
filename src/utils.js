@@ -3,23 +3,7 @@
 import prefix from 'vendor-prefix';
 import easings from './easings.js';
 
-// Borrowed from https://github.com/angular/angular.js/blob/0fc58516f4e92a46f6d445421c1f04ff9729c549/src/ngAnimate/animateCss.js
-var TRANSITIONEND_EVENT;
-var ANIMATIONEND_EVENT;
-
-if (window.ontransitionend === undefined && window.onwebkittransitionend !== undefined) {
-  TRANSITIONEND_EVENT = ['webkitTransitionEnd', 'transitionend'];
-}
-else {
-  TRANSITIONEND_EVENT = 'transitionend';
-}
-
-if (window.onanimationend === undefined && window.onwebkitanimationend !== undefined) {
-  ANIMATIONEND_EVENT = ['webkitAnimationEnd', 'animationend'];
-}
-else {
-  ANIMATIONEND_EVENT = 'animationend';
-}
+import { isUnitlessNumber, TRANSITIONEND_EVENT, ANIMATIONEND_EVENT } from './CSSProperty';
 
 var DOMStyle = document.createElement('style');
 DOMStyle.type = 'text/css';
@@ -137,7 +121,7 @@ export function getNormalizedDefinition(type, definition) {
           ruleProperty = ruleProperty.replace(/([A-Z])/g, '-$1').toLowerCase();
           let value = definition.keyframes[i][ruleProperty];
 
-          newDefinition.keyframes[step][prefix.dash(ruleProperty)] = typeof value === 'number' ? value + 'px' : value;
+          newDefinition.keyframes[step][prefix.dash(ruleProperty)] = typeof value === 'number' && !isUnitlessNumber[ruleProperty] ? value + 'px' : value;
         }
       }
     }
