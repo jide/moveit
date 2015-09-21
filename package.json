@@ -1,6 +1,6 @@
 {
   "name": "moveit",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Move it",
   "main": "lib/index.js",
   "repository": {
