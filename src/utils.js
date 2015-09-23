@@ -118,9 +118,7 @@ export function getNormalizedDefinition(type, definition) {
         newDefinition.keyframes[step] = {};
 
         for (let ruleProperty in definition.keyframes[i]) {
-          ruleProperty = ruleProperty.replace(/([A-Z])/g, '-$1').toLowerCase();
           let value = definition.keyframes[i][ruleProperty];
-
           newDefinition.keyframes[step][prefix.dash(ruleProperty)] = typeof value === 'number' && !isUnitlessNumber[ruleProperty] ? value + 'px' : value;
         }
       }
