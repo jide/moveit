@@ -18,7 +18,7 @@ npm i --save moveit
 ```
 
 ### Demo
-`npm start dev` then visit http://127.0.0.1:3000
+`npm start` then visit http://127.0.0.1:3000
 
 ### Usage
 ```js
