@@ -14,12 +14,15 @@ module.exports = {
   resolve: {
     extensions: ["", ".js", "jsx"]
   },
+  externals: [
+    "vendor-prefix"
+  ],
   module: {
     loaders: [
       {
         test: /\.jsx?$/,
         exclude: [/node_modules/],
-        loader: "babel-loader?optional[]=runtime&stage=0"
+        loader: "babel-loader?stage=0"
       }
     ]
   },
